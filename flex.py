@@ -8,10 +8,11 @@ from template.design import Designer
 from core.console import MainController
 from core.communicate import Communicate
 
+__version__ = 0.1
+
 class Flex(Prompt, Server, Designer, MainController, Communicate):
  ''' A Simple C&C Server '''
- __version__ = 0.1
-
+ 
  def __init__(self):
   self.ip = '127.0.0.1'
   self.port = 4444
