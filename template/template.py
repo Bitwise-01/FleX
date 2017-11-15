@@ -208,8 +208,8 @@ class Shell(Console):
     # execute & return
     output = cls().CMD(cmd)
     session.sendall(output.strip()) 
-   except socket.timeout:pass # added. May cause an issue
-   except socket.error:break  # added. May cause an issue
+   except socket.timeout:pass 
+   except socket.error:break  
    except:pass
   os.chdir(home)
 
