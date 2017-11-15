@@ -32,8 +32,10 @@ class Flex(Prompt, Server, Designer, MainController, Communicate):
   self.activePort = None
   self.default_to_shell = True
   self.prompt = self.getprompt()
+ 
+ def start(self):
+  try:self.cmdloop()
+  finally:self.disconnect(True)
    
 if __name__ == '__main__':
- main = Flex()
- try:main.cmdloop()
- finally:main.disconnect(True)
+ Flex().start()
