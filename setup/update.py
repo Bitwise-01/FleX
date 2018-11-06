@@ -10,6 +10,6 @@ class Update(object):
   self.repo = 'deb http://http.kali.org/kali kali-rolling main contrib non-free'
 
  def rewrite(self):
-  with open(self.sources, 'w') as source:source.write(self.repo)
+  with open(self.sources, 'a') as source:source.write(self.repo)
 
 
